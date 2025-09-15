@@ -7,5 +7,16 @@ steps:
       '.'
     ]
 
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: [
+      'run', 'deploy', 'flask-app',
+      '--image', 'asia-south1-docker.pkg.dev/gcp-lab-p1/cd-devops-repo/flask-app',
+      '--region', 'asia-south1',
+      '--platform', 'managed',
+      '--allow-unauthenticated'
+    ]
+
 images:
   - 'asia-south1-docker.pkg.dev/gcp-lab-p1/cd-devops-repo/flask-app'
+
