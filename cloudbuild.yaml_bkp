@@ -1,0 +1,11 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '-t',
+      'asia-south1-docker.pkg.dev/gcp-lab-p1/cd-devops-repo/flask-app',
+      '.'
+    ]
+
+images:
+  - 'asia-south1-docker.pkg.dev/gcp-lab-p1/cd-devops-repo/flask-app'
